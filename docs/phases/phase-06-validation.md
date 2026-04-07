@@ -1,42 +1,22 @@
 # Phase 06 – Validation & Documentation
 
 ## Objective
-Validate all deployed resources and ensure the infrastructure behaves as expected.
+Validate the deployed Azure resources and document the lab clearly for review and portfolio presentation.
 
-## Validation Steps
+## Validation Activities
+- Verified Resource Group deployment in Azure Portal
+- Verified Virtual Network and subnet segmentation
+- Verified NSG rules and subnet association
+- Verified Web, App, and Database VM deployment states
+- Verified private/public access design across tiers
+- Verified Load Balancer components
+- Verified Azure Bastion deployment
 
-### Resource Group
-- Confirmed creation in Azure Portal
-- Verified location and naming
-
-### Networking
-- Verified VNet and subnet segmentation (web, app, db, bastion)
-- Confirmed correct IP ranges
-
-### Security (NSG)
-- Checked inbound rules for HTTP (80) and RDP (3389)
-- Verified NSG association with web subnet
-
-### Compute
-- Verified deployment of:
-  - Web VM (public access)
-  - App VM (private)
-  - DB VM (private)
-- Confirmed VM status: Running
-
-### Connectivity
-- Verified public access to Web VM
-- Confirmed no public exposure for App and DB tiers
-
-### Infrastructure as Code
-- Ran `terraform plan` → no changes
-- Confirmed state consistency
-
-## Documentation
-- Captured screenshots for each phase
-- Organized project into structured folders
-- Maintained clean commit history
+## Documentation Activities
+- Captured screenshots for each implemented phase
+- Organized documentation under `docs/phases/`
+- Stored validation evidence in `screenshots/`
+- Maintained commit history in GitHub throughout the build
 
 ## Outcome
-All infrastructure components were successfully validated.  
-The environment reflects a production-style 3-tier architecture with proper segmentation, security, and deployment practices.
+This phase confirmed that the deployed infrastructure matched the intended 3-tier design and that the repository was structured for clear review, validation, and presentation.
