@@ -41,3 +41,7 @@ output "app_nic_name" {
 output "db_nic_name" {
   value = azurerm_network_interface.db_nic.name
 }
+
+output "load_balancer_name" {
+  value = azurerm_lb.web_lb.name
+}
