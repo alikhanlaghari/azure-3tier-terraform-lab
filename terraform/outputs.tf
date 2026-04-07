@@ -34,3 +34,7 @@ output "web_vm_public_ip_name" {
   value = azurerm_public_ip.web_pip.name
 }
 
+output "app_nic_name" {
+  value = azurerm_network_interface.app_nic.name
+}
+
