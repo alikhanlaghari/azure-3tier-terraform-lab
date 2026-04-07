@@ -38,3 +38,6 @@ output "app_nic_name" {
   value = azurerm_network_interface.app_nic.name
 }
 
+output "db_nic_name" {
+  value = azurerm_network_interface.db_nic.name
+}
