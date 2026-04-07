@@ -25,3 +25,8 @@ output "db_subnet_name" {
 output "bastion_subnet_name" {
   value = azurerm_subnet.bastion.name
 }
+
+output "web_nsg_name" {
+  value = azurerm_network_security_group.web_nsg.name
+}
+
