@@ -57,21 +57,21 @@ flowchart TD
     APP --> DB[DB VM - vm-db-01]
 
     subgraph RG[Resource Group: rg-azure-3tier-lab]
-        subgraph VNET[Virtual Network: vnet-3tier-lab | 10.0.0.0/16]
-            subgraph WEBNET[Web Subnet: snet-web | 10.0.1.0/24]
+        subgraph VNET[Virtual Network: vnet-3tier-lab 10.0.0.0/16]
+            subgraph WEBNET[Web Subnet: snet-web 10.0.1.0/24]
                 WEB
                 NSG[NSG: nsg-web]
             end
 
-            subgraph APPNET[App Subnet: snet-app | 10.0.2.0/24]
+            subgraph APPNET[App Subnet: snet-app 10.0.2.0/24]
                 APP
             end
 
-            subgraph DBNET[DB Subnet: snet-db | 10.0.3.0/24]
+            subgraph DBNET[DB Subnet: snet-db 10.0.3.0/24]
                 DB
             end
 
-            subgraph BASTIONNET[AzureBastionSubnet | 10.0.10.0/26]
+            subgraph BASTIONNET[AzureBastionSubnet 10.0.10.0/26]
                 BAS[Azure Bastion: bas-3tier-lab]
             end
         end
@@ -81,7 +81,7 @@ flowchart TD
     BAS --> APP
     BAS --> DB
     NSG --> WEB
-
+```
 ---
 
 ##  How to Deploy
