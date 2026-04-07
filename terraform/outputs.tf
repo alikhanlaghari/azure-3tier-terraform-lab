@@ -30,3 +30,7 @@ output "web_nsg_name" {
   value = azurerm_network_security_group.web_nsg.name
 }
 
+output "web_vm_public_ip_name" {
+  value = azurerm_public_ip.web_pip.name
+}
+
