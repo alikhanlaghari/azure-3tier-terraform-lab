@@ -246,3 +246,24 @@ resource "azurerm_lb_rule" "http_rule" {
   backend_address_pool_ids       = [azurerm_lb_backend_address_pool.web_pool.id]
   probe_id                       = azurerm_lb_probe.http_probe.id
 }
+
+resource "azurerm_public_ip" "bastion_pip" {
+  name                = "pip-bastion"
+  location            = azurerm_resource_group.main.location
+  resource_group_name = azurerm_resource_group.main.name
+  allocation_method   = "Static"
+  sku                 = "Standard"
+}
+
+resource "azurerm_bastion_host" "main" {
+  name                = "bas-3tier-lab"
+  location            = azurerm_resource_group.main.location
+  resource_group_name = azurerm_resource_group.main.name
+
+  ip_configuration {
+    name                 = "bastion-ip-config"
+    subnet_id            = azurerm_subnet.bastion.id
+    public_ip_address_id = azurerm_public_ip.bastion_pip.id
+  }
+}
+

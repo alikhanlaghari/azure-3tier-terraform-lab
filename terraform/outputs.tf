@@ -45,3 +45,7 @@ output "db_nic_name" {
 output "load_balancer_name" {
   value = azurerm_lb.web_lb.name
 }
+
+output "bastion_host_name" {
+  value = azurerm_bastion_host.main.name
+}
