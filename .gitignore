@@ -1,0 +1,13 @@
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Sensitive variables
+*.tfvars
+
+# OS / Editor
+.vscode/
+.DS_Store
+Thumbs.db
