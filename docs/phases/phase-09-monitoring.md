@@ -479,3 +479,26 @@ Heartbeat
 - Log ingestion delay should be considered  
 - Always validate alerts with test scenarios  
 
+## Activity Log Validation
+
+Administrative actions were successfully captured using Azure Activity Logs.
+
+### Test Performed
+
+- Web VM was stopped manually
+- Activity log captured full lifecycle:
+  - Accepted
+  - Started
+  - Succeeded
+
+### Evidence
+
+![Activity Log VM Stop](../screenshots/phase-09-activity-log-vm-stop-detailed.png)
+
+### Operational Value
+
+This provides audit visibility for administrative actions, enabling:
+
+- Change tracking
+- Incident investigation
+- Security auditing
