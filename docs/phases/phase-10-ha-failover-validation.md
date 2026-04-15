@@ -28,8 +28,8 @@ IIS was installed on both backend virtual machines.
 
 ### Evidence
 
-![IIS Installed VM Web 01](../screenshots/phase-10/01-iis-installed-vm-web-01.png)  
-![IIS Installed VM Web 02](../screenshots/phase-10/02-iis-installed-vm-web-02.png)
+![IIS Installed VM Web 01](../../screenshots/phase-10/01-iis-installed-vm-web-01.png)  
+![IIS Installed VM Web 02](../../screenshots/phase-10/02-iis-installed-vm-web-02.png)
 
 ---
 
@@ -42,7 +42,7 @@ Custom index pages were created on each VM to identify traffic routing:
 
 ### Evidence
 
-![VM Identity Pages](../screenshots/phase-10/03-vm-identity-pages.png)
+![VM Identity Pages](../../screenshots/phase-10/03-vm-identity-pages.png)
 
 ---
 
@@ -52,7 +52,7 @@ Verified that the Load Balancer distributes traffic across both VMs.
 
 ### Evidence
 
-![Load Balancer Working](../screenshots/phase-10/04-lb-working.png)
+![Load Balancer Working](../../screenshots/phase-10/04-lb-working.png)
 
 ---
 
@@ -79,8 +79,8 @@ Stop-Service W3SVC
 
 ### Evidence
 
-![IIS Stopped VM Web 01](../screenshots/phase-10/05-iis-stopped-vm-web-01.png)  
-![Failover Success](../screenshots/phase-10/07-failover-success.png)
+![IIS Stopped VM Web 01](../../screenshots/phase-10/05-iis-stopped-vm-web-01.png)  
+![Failover Success](../../screenshots/phase-10/07-failover-success.png)
 
 ---
 
@@ -100,7 +100,7 @@ Azure Monitor was used to validate backend health behavior.
 
 ### Evidence
 
-![Health Probe Drop](../screenshots/phase-10/06-health-probe-drop.png)
+![Health Probe Drop](../../screenshots/phase-10/06-health-probe-drop.png)
 
 ---
 
