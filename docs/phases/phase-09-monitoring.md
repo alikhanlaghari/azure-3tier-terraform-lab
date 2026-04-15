@@ -152,12 +152,6 @@ Heartbeat
 
 ---
 
-## Evidence
-
-*(Add screenshot here)*
-
----
-
 ## Operational Response
 
 If this alert fires:
@@ -493,7 +487,7 @@ Administrative actions were successfully captured using Azure Activity Logs.
 
 ### Evidence
 
-![Activity Log VM Stop](../screenshots/phase-09-activity-log-vm-stop-detailed.png)
+![Activity Log VM Stop](../../screenshots/phase-09-activity-log-vm-stop-detailed.png)
 
 ### Operational Value
 
