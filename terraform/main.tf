@@ -123,6 +123,43 @@ resource "azurerm_windows_virtual_machine" "web_vm" {
   }
 }
 
+resource "azurerm_network_interface" "web_nic_02" {
+  name                = "nic-web-vm-02"
+  location            = azurerm_resource_group.main.location
+  resource_group_name = azurerm_resource_group.main.name
+
+  ip_configuration {
+    name                          = "internal"
+    subnet_id                     = azurerm_subnet.web.id
+    private_ip_address_allocation = "Dynamic"
+  }
+}
+
+resource "azurerm_windows_virtual_machine" "web_vm_02" {
+  name                = "vm-web-02"
+  resource_group_name = azurerm_resource_group.main.name
+  location            = azurerm_resource_group.main.location
+  size                = "Standard_D2ads_v7"
+  admin_username      = var.admin_username
+  admin_password      = var.admin_password
+  network_interface_ids = [
+    azurerm_network_interface.web_nic_02.id
+  ]
+
+  os_disk {
+    caching              = "ReadWrite"
+    storage_account_type = "Standard_LRS"
+    name                 = "osdisk-web-02"
+  }
+
+  source_image_reference {
+    publisher = "MicrosoftWindowsServer"
+    offer     = "WindowsServer"
+    sku       = "2022-datacenter-azure-edition"
+    version   = "latest"
+  }
+}
+
 resource "azurerm_network_interface" "app_nic" {
   name                = "nic-app-vm"
   location            = azurerm_resource_group.main.location
@@ -224,6 +261,12 @@ resource "azurerm_lb_backend_address_pool" "web_pool" {
 
 resource "azurerm_network_interface_backend_address_pool_association" "web_nic_lb" {
   network_interface_id    = azurerm_network_interface.web_nic.id
+  ip_configuration_name   = "internal"
+  backend_address_pool_id = azurerm_lb_backend_address_pool.web_pool.id
+}
+
+resource "azurerm_network_interface_backend_address_pool_association" "web_nic_02_lb" {
+  network_interface_id    = azurerm_network_interface.web_nic_02.id
   ip_configuration_name   = "internal"
   backend_address_pool_id = azurerm_lb_backend_address_pool.web_pool.id
 }
