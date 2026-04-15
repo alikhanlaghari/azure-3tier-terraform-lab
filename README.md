@@ -30,8 +30,8 @@ The lab is designed to simulate real-world enterprise infrastructure with proper
 - Phase 5 – Compute
 - Phase 6 – Validation & Documentation
 - Phase 7 – Load Balancer
-- Phase 8 – Azure Bastion
 - Phase 9 – Monitoring
+- Phase 9B – Load Balancer Backend Health Validation
 
 ## 🚀 Deployed Components
 - Resource Group
