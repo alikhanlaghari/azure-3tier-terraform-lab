@@ -85,8 +85,8 @@ Confirmed via Azure Portal:
 
 📸 Evidence:
 
-![VM Zone 1](screenshots/phase-11/vm-web-01-zone-1-overview.png)  
-![VM Zone 2](screenshots/phase-11/vm-web-02-zone-2-overview.png)
+![VM Zone 1](../../screenshots/phase-11/vm-web-01-zone-1-overview.png)  
+![VM Zone 2](../../screenshots/phase-11/vm-web-02-zone-2-overview.png)
 
 ---
 
@@ -96,7 +96,7 @@ Confirmed both VMs are part of backend pool:
 
 📸 Evidence:
 
-![Backend Pool](screenshots/phase-11/lb-backend-health-status.png)
+![Backend Pool](../../screenshots/phase-11/lb-backend-health-status.png)
 
 ---
 
@@ -115,8 +115,8 @@ Refreshed multiple times:
 
 📸 Evidence:
 
-![VM 1 Response](screenshots/phase-11/lb-vm01-response.png)  
-![VM 2 Response](screenshots/phase-11/lb-vm02-response.png)
+![VM 1 Response](../../screenshots/phase-11/lb-vm01-response.png)  
+![VM 2 Response](../../screenshots/phase-11/lb-vm02-response.png)
 
 ---
 
@@ -129,7 +129,7 @@ Checked metric:
 
 📸 Evidence:
 
-![DipAvailability](screenshots/phase-11/lb-health-dipavailability.png)
+![DipAvailability](../../screenshots/phase-11/lb-health-dipavailability.png)
 
 ---
 
