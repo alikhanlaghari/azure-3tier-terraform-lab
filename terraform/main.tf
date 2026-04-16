@@ -103,6 +103,7 @@ resource "azurerm_windows_virtual_machine" "web_vm" {
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
   size                = "Standard_D2ads_v7"
+  zone                = "1"
   admin_username      = var.admin_username
   admin_password      = var.admin_password
   network_interface_ids = [
@@ -140,6 +141,7 @@ resource "azurerm_windows_virtual_machine" "web_vm_02" {
   resource_group_name = azurerm_resource_group.main.name
   location            = azurerm_resource_group.main.location
   size                = "Standard_D2ads_v7"
+  zone                = "2"
   admin_username      = var.admin_username
   admin_password      = var.admin_password
   network_interface_ids = [
@@ -159,7 +161,6 @@ resource "azurerm_windows_virtual_machine" "web_vm_02" {
     version   = "latest"
   }
 }
-
 resource "azurerm_network_interface" "app_nic" {
   name                = "nic-app-vm"
   location            = azurerm_resource_group.main.location
